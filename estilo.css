@@ -29,11 +29,11 @@ header{
     background-color: rgb(46, 111, 215);
 }
 
-.nosotros, .servicios{
+.nosotros, .productos{
     margin: 6rem auto;
 }
 
-.nosotros h2, .nosotros p, .servicios h2, .servicios p, .servicios h5{
+.nosotros h2, .nosotros p, .productos h2, .productos p, .productos h5{
     color: var(--color-back);
 }
 
