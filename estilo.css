@@ -12,6 +12,15 @@ header{
     background-color: var(--color-back);
 }
 
+.collapse a{
+    opacity: 100%;
+}
+
+.collapse a:hover{
+    opacity: 70%;
+    transition: 0.3s;
+    background-color: none;
+}
 
 .productos-btn{
     background-color: var(--color-primary);
