@@ -12,9 +12,21 @@ header{
     background-color: var(--color-back);
 }
 
-.btn{
-    border: none;
+
+.productos-btn{
     background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    width: 7rem;
+    margin: 1rem 0;
+    transition: 0.3s;
+}
+
+.productos-btn:hover{
+    background-color: rgb(46, 111, 215);
 }
 
 .nosotros, .servicios{
