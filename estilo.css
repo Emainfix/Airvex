@@ -31,7 +31,7 @@ header h3{
 
 .line{
     height: 0.03rem;
-    background-color: rgb(216, 216, 216);
+    background-color: #d8d8d8;
 }
 
 .nosotros img{
@@ -51,4 +51,89 @@ header h3{
 .dropdown-inactive:hover{
     color: #d8d8d8;
     background: none;
+}
+
+.container-form{
+    background-color: var(--color-gray);
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+.contacto-portada{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,#5395ffff 0%, rgb(222, 235, 255) 50%, #ffecae 100%);
+    height: 300px;
+}
+
+.contacto-portada h1{
+    padding: 0;
+    text-align: center;
+}
+
+.formulario{
+    margin: auto;
+    max-width: 900px;
+}
+
+.contacto-datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2rem;
+    padding: 1rem 4rem;
+}
+
+.contacto-datos h5{
+    margin-bottom: 1rem;
+} 
+
+.contacto-datos ul{
+    list-style: none;
+    padding: 0;
+}
+
+.contacto-datos a{
+    text-decoration: none;
+    color: var(--color-back);
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 30rem;
+
+}
+
+.contacto input{
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 0.3rem;
+    height: 2.5rem;
+}
+
+.contacto textarea{
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 0.3rem;
+    height: 10rem;
+    resize: none;
+}
+
+.contacto input::placeholder, textarea::placeholder{
+    padding-left: 0.5rem;
+    color: #d8d8d8;
+}
+
+.btn-enviar{
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    height: 3rem;
+    width: 100%;
 }
