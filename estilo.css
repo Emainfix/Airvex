@@ -8,8 +8,14 @@
     --color-gray: #f0f0f0;
 }
 
+/*Header*/
+
 header{
     background-color: var(--color-back);
+}
+
+.title-secciones{
+    margin: 6rem auto;
 }
 
 .nav-a{
@@ -38,10 +44,6 @@ header{
     background-color: rgb(46, 111, 215);
 }
 
-.nosotros, .productos{
-    margin: 6rem auto;
-}
-
 .nosotros h2, .nosotros p, .productos h2, .productos p, .productos h5{
     color: var(--color-back);
 }
@@ -63,20 +65,6 @@ header h3{
     background-color: #d8d8d8;
 }
 
-.nosotros img{
-    border-radius: 0.3rem;
-}
-
-.productos{
-    padding: 0 3rem;
-    margin: 3rem auto;
-}
-
-.cards{
-    border: 0.1rem solid #f0f0f0;
-    border-radius: 0.3rem;
-}
-
 .dropdown-inactive{
     color: #d8d8d8;
 }
@@ -85,6 +73,25 @@ header h3{
     color: #d8d8d8;
     background: none;
 }
+
+/*Nosotros*/
+
+.nosotros img{
+    border-radius: 0.3rem;
+}
+
+/*Productos*/
+
+.productos{
+    padding: 0 3rem;
+}
+
+.cards{
+    border: 0.1rem solid #f0f0f0;
+    border-radius: 0.3rem;
+}
+
+/*Contacto*/
 
 .container-form{
     background-color: var(--color-gray);
@@ -176,6 +183,8 @@ header h3{
     background-color: rgb(46, 111, 215);
 }
 
+/*Puntos de venta*/
+
 .tienda{
     border: 0.1rem solid #f0f0f0;
     border-radius: 0.3rem;
@@ -215,37 +224,57 @@ header h3{
     background-color: rgb(46, 111, 215);
 }
 
+/*Footer*/
 
-@media (max-width: 990px){
+.footer{
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+
+.footer ul{
+    justify-content: end;
+}
+
+/*Responsive*/
+
+@media (max-width: 970px){
+
+        .title-secciones{
+            margin: 4rem auto;
+        }
+
         .nosotros-contenido{
             display: flex;
             flex-direction: column;
             margin: 0;
-            padding: 1rem 0.5rem;
         }
 
         .nosotros-img-txt{
-            padding: 1rem;
+            padding: 0 1rem;
         }
 
         .nosotros{
+            display: flex;
+            flex-direction: column;
             padding: 0;
         }
 
         .productos-contenido{
-            margin: 6rem auto;
-            padding: 1rem;
+            margin: 0rem;
+            padding: 0rem;
         }
 
         .productos{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 1rem 0.5rem;
+            padding: 0 1rem;
             margin: 0;
         }
 
         .formulario{
+            margin-top: 4rem;
+            margin-bottom: 0;
             width: 90%;
         }
 
@@ -269,6 +298,18 @@ header h3{
         .tienda-contenedor img{
             max-width: 20rem;
             border-radius: 0.3rem;
+            padding: 1rem;
         }
+
+        .tienda{
+            margin: 0;
+            padding: 0;
+        }
+
+        .pventa-fondo{
+            margin: 0;
+            padding: 0;
+        }
+
 
 }
