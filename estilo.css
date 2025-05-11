@@ -12,11 +12,11 @@ header{
     background-color: var(--color-back);
 }
 
-.collapse a{
+.nav-a{
     opacity: 100%;
 }
 
-.collapse a:hover{
+.nav-a:hover{
     opacity: 70%;
     transition: 0.3s;
     background-color: none;
@@ -50,7 +50,7 @@ header h3{
     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.443));
 }
 
-.nav-inactive {
+.nav-inactive{
     color: #7f7f7f;
 }
 
@@ -65,6 +65,11 @@ header h3{
 
 .nosotros img{
     border-radius: 0.3rem;
+}
+
+.productos{
+    padding: 0 3rem;
+    margin: 3rem auto;
 }
 
 .cards{
@@ -208,4 +213,62 @@ header h3{
 
 .tienda-btn:hover{
     background-color: rgb(46, 111, 215);
+}
+
+
+@media (max-width: 990px){
+        .nosotros-contenido{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 1rem 0.5rem;
+        }
+
+        .nosotros-img-txt{
+            padding: 1rem;
+        }
+
+        .nosotros{
+            padding: 0;
+        }
+
+        .productos-contenido{
+            margin: 6rem auto;
+            padding: 1rem;
+        }
+
+        .productos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem 0.5rem;
+            margin: 0;
+        }
+
+        .formulario{
+            width: 90%;
+        }
+
+        .contacto{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+
+        }
+
+        .contacto-datos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            padding: 4rem 0 0 0;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .tienda-contenedor img{
+            max-width: 20rem;
+            border-radius: 0.3rem;
+        }
+
 }
