@@ -12,6 +12,8 @@ const carrito = {
   total: 0,
 };
 
+const lista = document.getElementById("lista-carrito");
+
 let newProducto; // Variable para agregar un producto
 
 //Boton aspiradora1
@@ -59,4 +61,6 @@ function addProducto(p) {
   carrito.total = carrito.total + p.precio;
   console.log(carrito.items);
   console.log(carrito.total);
+
+  lista.innerHTML += `<li>Se agregó</li>`;
 }
