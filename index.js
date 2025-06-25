@@ -7,8 +7,14 @@ class Producto {
   }
 }
 
-let newProducto;
+const carrito = {
+  items: [],
+  total: 0,
+};
 
+let newProducto; // Variable para agregar un producto
+
+//Boton aspiradora1
 const aspiradora1 = new Producto(1, 1, "S10 Plus", 200);
 
 const aspiradora1btn = document.getElementById("boton-aspiradora1");
@@ -18,6 +24,7 @@ aspiradora1btn.onclick = function () {
   addProducto(newProducto);
 };
 
+//Boton aspiradora2
 const aspiradora2 = new Producto(2, 1, "pppp", 150);
 
 const aspiradora2btn = document.getElementById("boton-aspiradora2");
@@ -27,18 +34,16 @@ aspiradora2btn.onclick = function () {
   addProducto(newProducto);
 };
 
-let carrito = [];
-
 function addProducto(p) {
   let encontrado = false;
 
-  if (carrito.length < 1) {
-    carrito.push(p);
+  if (carrito.items.length < 1) {
+    carrito.items.push(p);
   } else {
-    for (let i = 0; i < carrito.length; i++) {
-      if (carrito[i].id == p.id) {
+    for (let i = 0; i < carrito.items.length; i++) {
+      if (carrito.items[i].id == p.id) {
         encontrado = true;
-        i = carrito.length;
+        i = carrito.items.length;
       } else {
         encontrado = false;
       }
@@ -46,9 +51,12 @@ function addProducto(p) {
     if (encontrado) {
       p.cantidad++;
     } else {
-      carrito.push(p);
+      carrito.items.push(p);
     }
   }
 
-  console.log(carrito);
+  //Suma el costo al total en el carrito
+  carrito.total = carrito.total + p.precio;
+  console.log(carrito.items);
+  console.log(carrito.total);
 }
