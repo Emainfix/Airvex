@@ -1,27 +1,37 @@
 class Producto {
-  constructor(nombre, precio, cantidad) {
+  constructor(id, cantidad, nombre, precio) {
+    this.id = id;
     this.cantidad = cantidad;
     this.nombre = nombre;
     this.precio = precio;
   }
 }
 
-const aspiradora1 = new Producto(1, "S10 Plus", 200);
+let newProducto;
 
-const agregar = document.getElementById("boton-aspiradora1");
+const aspiradora1 = new Producto(1, 1, "S10 Plus", 200);
+
+const aspiradora1btn = document.getElementById("boton-aspiradora1");
 
 let carrito = [];
 
-agregar.onclick = function () {
-  for (let i = 0; i < carrito.length; i++) {
-    for (let k = 0; k < carrito.length; k++) {
-      if (i != k && carrito[i] == carrito[k]) {
-        aspiradora1.cantidad++;
+aspiradora1btn.onclick = function () {
+  newProducto = aspiradora1;
+  addProducto(newProducto);
+};
+
+function addProducto(p) {
+  if (carrito.length < 1) {
+    carrito.push(p);
+  } else {
+    for (let i = 0; i < carrito.length; i++) {
+      if (carrito[i].id == p.id) {
+        p.cantidad++;
       } else {
-        carrito.push(aspiradora1);
+        carrito.push(p);
       }
     }
   }
 
   console.log(carrito);
-};
+}
