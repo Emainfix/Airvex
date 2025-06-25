@@ -36,17 +36,9 @@ aspiradora2btn.onclick = function () {
 
 function addProducto(p) {
   
-  let encontrado = false;
-  let indexEncontrado = carrito.items.indexOf(p);
+  let indexEncontrado = carrito.items.indexOf(p); // Extrae el index que ocupa el producto
 
-  for (let i = 0; i < carrito.items.length; i++) {
-    if (carrito.items[i].id == p.id) {
-      encontrado = true;
-      indexEncontrado = i;
-      break
-    }
-  }
-  if (encontrado) {
+  if (indexEncontrado >= 0) {
     p.cantidad++;
     lista.children[indexEncontrado].innerHTML = `<strong>${p.nombre}</strong> <strong>Costo:</strong> ${p.precio}$ <strong>Cantidad:<strong/> ${p.cantidad}`;
   } else {
