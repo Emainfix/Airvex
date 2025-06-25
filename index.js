@@ -14,6 +14,8 @@ const carrito = {
 
 const lista = document.getElementById("lista-carrito");
 
+const total = document.getElementById("total");
+
 let newProducto; // Variable para agregar un producto
 
 //Boton aspiradora1
@@ -41,6 +43,7 @@ function addProducto(p) {
 
   if (carrito.items.length < 1) {
     carrito.items.push(p);
+    lista.innerHTML += `<li>Se agregó ${p.nombre} ${p.cantidad}</li>`;
   } else {
     for (let i = 0; i < carrito.items.length; i++) {
       if (carrito.items[i].id == p.id) {
@@ -52,8 +55,12 @@ function addProducto(p) {
     }
     if (encontrado) {
       p.cantidad++;
+      lista.children[
+        carrito.items.indexOf(p)
+      ].innerHTML = `<li>Se agregó ${p.nombre} ${p.cantidad}</li>`;
     } else {
       carrito.items.push(p);
+      lista.innerHTML += `<li>Se agregó ${p.nombre} ${p.cantidad}</li>`;
     }
   }
 
@@ -61,6 +68,6 @@ function addProducto(p) {
   carrito.total = carrito.total + p.precio;
   console.log(carrito.items);
   console.log(carrito.total);
-
-  lista.innerHTML += `<li>Se agregó</li>`;
+  total.innerHTML = `<h3> ${carrito.total} </h3>`;
+  console.log(carrito.items.indexOf(p));
 }
