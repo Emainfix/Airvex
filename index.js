@@ -67,19 +67,30 @@ function addProducto(p) {
 
   if (indexEncontrado >= 0) {
     p.cantidad++;
-    lista.children[indexEncontrado].innerHTML = `${p.nombre} <strong>US$${p.precio}</strong> <strong>Cant.:<strong/> ${p.cantidad}`;
+    lista.children[indexEncontrado].innerHTML = `<div class="p-2 d-flex align-items-center">
+      <h4 class="px-4">${p.nombre}</h4>
+      <div class="px-4 border-start border-3 d-flex align-items-center"><strong>US$${p.precio}</strong></div> 
+      <div class="px-4 border-start border-3"><strong>Cant:</strong>${p.cantidad}</div>
+    </div>`;
   } else {
-    lista.innerHTML += `<li>${p.nombre} <strong>US$${p.precio}</strong> <strong>Cant.:<strong/> ${p.cantidad}</li>`;
+    lista.innerHTML += `<li class="d-flex justify-content-end">
+    <div class="p-2 d-flex align-items-center">
+      <h4 class="px-4">${p.nombre}</h4>
+      <div class="px-4 border-start border-3 d-flex align-items-center"><strong>US$${p.precio}</strong></div> 
+      <div class="px-4 border-start border-3"><strong>Cant:</strong>${p.cantidad}</div>
+    </div>
+    </li>`;
     carrito.items.push(p);
     console.log(carrito.items.length);
   }
-    
+
+  
 
 
   //Suma el costo al total en el carrito
   carrito.total = carrito.total + p.precio;
   console.log(carrito.items);
   console.log(carrito.total);
-  total.innerHTML = `<h3> TOTAL: <strong>US$${carrito.total}</strong> </h3>`;
+  total.innerHTML = `<h3 class="px-4 border-top border-3 py-4"> TOTAL: <strong>US$${carrito.total}</strong> </h3>`;
   
 }
