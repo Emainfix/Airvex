@@ -24,19 +24,27 @@ const aspiradora1Eliminar = document.getElementById("eliminar-aspiradora1")
 
 aspiradora1btn.onclick = function () {
   addProducto(aspiradora1);
+  console.log(carrito.items.indexOf(aspiradora1))
 };
-
 aspiradora1Eliminar.onclick = function () {
-  restarProducto(aspiradora1);
+  if (aspiradora1.cantidad > 0){
+    restarProducto(aspiradora1);
+    console.log(carrito.items.indexOf(aspiradora1))
+  }
+  
 };
 
 //Boton aspiradora2
-const aspiradora2 = new Producto(2, 1, "ROPVACNIC", 150);
+const aspiradora2 = new Producto(2, 0, "ROPVACNIC", 150);
 
 const aspiradora2btn = document.getElementById("boton-aspiradora2");
+const aspiradora2Eliminar = document.getElementById("eliminar-aspiradora2")
 
 aspiradora2btn.onclick = function () {
   addProducto(aspiradora2);
+};
+aspiradora2Eliminar.onclick = function () {
+  restarProducto(aspiradora2);
 };
 
 //Boton aspiradora3
@@ -70,15 +78,8 @@ function addProducto(p) {
   
   let indexEncontrado = carrito.items.indexOf(p); // Extrae el index que ocupa el producto
 
-  if (indexEncontrado >= 0) {
-    p.cantidad++;
-    lista.children[indexEncontrado].innerHTML = `<div class="p-2 d-flex align-items-center">
-      <h4 class="px-4">${p.nombre}</h4>
-      <div class="px-4 border-start border-3 d-flex align-items-center"><strong>US$${p.precio}</strong></div> 
-      <div class="px-4 border-start border-3"><strong>Cant:</strong>${p.cantidad}</div>
-    </div>`;
-  } else {
-    p.cantidad++;
+  if(indexEncontrado == -1){
+    p.cantidad = 1;
     lista.innerHTML += `<li class="d-flex justify-content-end">
     <div class="p-2 d-flex align-items-center">
       <h4 class="px-4">${p.nombre}</h4>
@@ -88,7 +89,15 @@ function addProducto(p) {
     </li>`;
     carrito.items.push(p);
     console.log(carrito.items.length);
+  }else{
+    p.cantidad++;
+    lista.children[indexEncontrado].innerHTML = `<div class="p-2 d-flex align-items-center">
+      <h4 class="px-4">${p.nombre}</h4>
+      <div class="px-4 border-start border-3 d-flex align-items-center"><strong>US$${p.precio}</strong></div> 
+      <div class="px-4 border-start border-3"><strong>Cant:</strong>${p.cantidad}</div>
+    </div>`;
   }
+
 
   //Suma el costo al total en el carrito
   console.log(carrito.items);
@@ -101,7 +110,7 @@ function addProducto(p) {
 function restarProducto(p) {
   
   let indexEncontrado = carrito.items.indexOf(p); // Extrae el index que ocupa el producto
-  
+
   if (indexEncontrado >= 0 && p.cantidad > 0) {
     p.cantidad--;
     lista.children[indexEncontrado].innerHTML = `<div class="p-2 d-flex align-items-center">
@@ -112,16 +121,20 @@ function restarProducto(p) {
 
     carrito.total = carrito.total - p.precio;
     total.innerHTML = `<h3 class="px-4 border-top border-3 py-4"> TOTAL: <strong>US$${carrito.total}</strong> </h3>`;
+    console.log(carrito.items);
   }
 
-  if (p.cantidad == 0){
-    lista.children[indexEncontrado].innerHTML = ``
-    carrito.items.splice(indexEncontrado);
+  if (indexEncontrado >= 0 && p.cantidad == 0){
+    lista.children[indexEncontrado].innerHTML = ``;
+    lista.removeChild(lista.children[indexEncontrado]);
+    carrito.items.splice(indexEncontrado,1);
     console.log(carrito.items);
   }
 
   if (carrito.total == 0){
     total.innerHTML = ``
   }
+    
+  
   
 }
