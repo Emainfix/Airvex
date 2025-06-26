@@ -100,13 +100,17 @@
                     <div class="col-12 col-lg-4 my-4 d-flex justify-content-center">
                         <div class="card text-center" style="width: 24rem;">
                             <img src="Media/img/destacados/01.png" class="img-fluid card-img-top" alt="Aspiradora robot blanca pasando por debajo de unos pies">
-                            <div class="card-body">
+                            <div class="card-body gap-2">
                                 <h5 class="card-title">S10 Plus</h5>
                                 <p class="card-text">90 días de limpieza manos libres.</p>
-                                <a href="trapeadoras.html#S10" class="btn productos-btn btn-primary">Explorar</a>
-                                <a id="boton-aspiradora1" class="btn productos-btn btn-primary">Comprar</a>
+                                <div><a id="boton-aspiradora1" class="btn productos-btn btn-primary">Agregar +</a></div>
+                                <div>
+                                    <a class="px-4 text-decoration-none" href="trapeadoras.html#S10">Eliminar</a>
+                                    <a class="px-4 border-start border-3" href="trapeadoras.html#S10">Explorar</a>
                                 </div>
+                                
                             </div>
+                        </div>
                     </div>
                     <div class="col-12 col-lg-4 my-4 d-flex justify-content-center">
                         <div class="card text-center" style="width: 24rem;">
@@ -161,11 +165,16 @@
 
         <section class="container">
             <div class="row">
-                <ul class="col-12" id="lista-carrito">
+                <div class="col-4"></div>
+                <div class="col-4">
+                <ul class="text-end list-unstyled" id="lista-carrito">
                 </ul>
+                <div class="text-end" id="total"></div>
+                </div>
+                <div class="col-4"></div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-4 my-4 d-flex justify-content-center"><div id="total"></div></div>
+                <div class="col-12 col-lg-4 my-4 d-flex justify-content-center"></div>
             </div>
         </section>
 
