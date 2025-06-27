@@ -48,30 +48,42 @@ aspiradora2Eliminar.onclick = function () {
 };
 
 //Boton aspiradora3
-const aspiradora3 = new Producto(3, 1, "A12 Pro", 180);
+const aspiradora3 = new Producto(3, 0, "A12 Pro", 180);
 
 const aspiradora3btn = document.getElementById("boton-aspiradora3");
+const aspiradora3Eliminar = document.getElementById("eliminar-aspiradora3")
 
 aspiradora3btn.onclick = function () {
   addProducto(aspiradora3);
 };
+aspiradora3Eliminar.onclick = function () {
+  restarProducto(aspiradora3);
+};
 
 //Boton aspiradora4
-const aspiradora4 = new Producto(4, 1, "BL-20 Lidar", 350);
+const aspiradora4 = new Producto(4, 0, "BL-20 Lidar", 350);
 
 const aspiradora4btn = document.getElementById("boton-aspiradora4");
+const aspiradora4Eliminar = document.getElementById("eliminar-aspiradora4")
 
 aspiradora4btn.onclick = function () {
   addProducto(aspiradora4);
 };
+aspiradora4Eliminar.onclick = function () {
+  restarProducto(aspiradora4);
+};
 
 //Boton aspiradora5
-const aspiradora5 = new Producto(5, 1, "S10 Plus", 182);
+const aspiradora5 = new Producto(5, 0, "S10 Plus", 182);
 
 const aspiradora5btn = document.getElementById("boton-aspiradora5");
+const aspiradora5Eliminar = document.getElementById("eliminar-aspiradora5")
 
 aspiradora5btn.onclick = function () {
   addProducto(aspiradora5);
+};
+aspiradora5Eliminar.onclick = function () {
+  restarProducto(aspiradora5);
 };
 
 function addProducto(p) {
