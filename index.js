@@ -16,6 +16,8 @@ const lista = document.getElementById("lista-carrito");
 
 const total = document.getElementById("total");
 
+const tituloCarrito = document.getElementById("titulo-carrito");
+
 //Boton aspiradora1
 const aspiradora1 = new Producto(1, 0, "S10 Plus", 200);
 
@@ -115,6 +117,7 @@ function addProducto(p) {
   console.log(carrito.items);
   console.log(carrito.total);
   carrito.total = carrito.total + p.precio;
+  tituloCarrito.innerHTML = `<h2 class="text-center title-secciones">Carrito</h2>`;
   total.innerHTML = `<h3 class="px-4 border-top border-3 py-4"> TOTAL: <strong>US$${carrito.total}</strong> </h3>`;
   
 }
@@ -144,6 +147,7 @@ function restarProducto(p) {
   }
 
   if (carrito.total == 0){
+    tituloCarrito.innerHTML = ``
     total.innerHTML = ``
   }
     
