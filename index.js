@@ -74,7 +74,7 @@ aspiradora4Eliminar.onclick = function () {
 };
 
 //Boton aspiradora5
-const aspiradora5 = new Producto(5, 0, "S10 Plus", 182);
+const aspiradora5 = new Producto(5, 0, "AI Ultra", 182);
 
 const aspiradora5btn = document.getElementById("boton-aspiradora5");
 const aspiradora5Eliminar = document.getElementById("eliminar-aspiradora5")
@@ -102,7 +102,7 @@ function addProducto(p) {
   
   let indexEncontrado = carrito.items.indexOf(p); // Extrae el index que ocupa el producto
 
-  if(indexEncontrado == -1){
+  if(indexEncontrado < 0){
     p.cantidad = 1;
     lista.innerHTML += `<li class="d-flex justify-content-end">
     <div class="p-2 d-flex align-items-center">
