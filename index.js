@@ -176,7 +176,7 @@ function Comprar(){
 
   function eliminarCarrito(){
     carrito.items = []
-
+    carrito.total = 0
     lista.innerHTML = ``
     tituloCarrito.innerHTML = ``
     total.innerHTML = ``
