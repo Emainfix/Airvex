@@ -8,6 +8,11 @@
     --color-gray: #f0f0f0;
 }
 
+.img-main-album{
+    max-width: 180%;
+    border-radius: 0.3rem;
+}
+
 /*Carrito*/
 .btn-comprar{
     background-color: var(--color-primary);
@@ -275,6 +280,11 @@ header h3{
 /*Responsive*/
 
 @media (max-width: 950px){
+
+        .img-main-album{
+            max-width: 100%;
+            border-radius: 0.3rem;
+        }
 
         .title-secciones{
             margin: 4rem auto;
