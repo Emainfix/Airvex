@@ -183,3 +183,5 @@ function Comprar(){
     finalizarCompra.innerHTML = ``
     limpiarCarrito.innerHTML = ``
   }
+
+  
