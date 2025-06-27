@@ -6,6 +6,8 @@ const imgAlbum04 = document.getElementById("img-album-04")
 const imgAlbum05 = document.getElementById("img-album-05")
 const imgAlbum06 = document.getElementById("img-album-06")
 
+imgAlbumMain.innerHTML = `<img src="${imgAlbum01.src}" class="img-main-album " alt="Imagen del álbum">`;
+
 imgAlbum01.onclick = function(){
     mostrarImg(imgAlbum01)
 }
