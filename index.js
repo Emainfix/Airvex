@@ -88,6 +88,12 @@ aspiradora5Eliminar.onclick = function () {
   restarProducto(aspiradora5);
 };
 
+const finalizarCompra = document.getElementById("btn-fin-compra")
+finalizarCompra.onclick = function()
+{
+  console.log("Funciona")
+}
+
 function addProducto(p) {
   
   let indexEncontrado = carrito.items.indexOf(p); // Extrae el index que ocupa el producto
@@ -119,6 +125,7 @@ function addProducto(p) {
   carrito.total = carrito.total + p.precio;
   tituloCarrito.innerHTML = `<h2 class="text-center title-secciones">Carrito</h2>`;
   total.innerHTML = `<h3 class="px-4 border-top border-3 py-4"> TOTAL: <strong>US$${carrito.total}</strong> </h3>`;
+  finalizarCompra.innerHTML = `<button class="btn-comprar">Finalizar Compra</button>`
   
 }
 
@@ -150,7 +157,6 @@ function restarProducto(p) {
     tituloCarrito.innerHTML = ``
     total.innerHTML = ``
   }
-    
-  
-  
+
 }
+
