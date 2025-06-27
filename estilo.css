@@ -70,6 +70,9 @@ header{
     background-color: none;
 }
 
+.productos-secciones{
+    padding: 0 3rem;
+}
 .productos-btn{
     background-color: var(--color-primary);
     color: #fff;
@@ -124,9 +127,7 @@ header h3{
 
 /*Productos*/
 
-.productos{
-    padding: 0 3rem;
-}
+
 
 .cards{
     border: 0.1rem solid #f0f0f0;
@@ -156,6 +157,7 @@ header h3{
 }
 
 .formulario{
+    padding: 0 0.75rem 0 0.75rem;
     margin: 6rem auto;
     max-width: 900px;
 }
@@ -240,6 +242,11 @@ header h3{
     padding: 0 3rem;
 }
 
+.pventa-contenedor img{
+    max-width: 100%;
+    border-radius: 0.3rem;
+}
+
 .tienda{
     border: 0.1rem solid #f0f0f0;
     border-radius: 0.3rem;
@@ -256,6 +263,17 @@ header h3{
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+.pventa-contenedor{
+    margin: 0;
+    padding: 2rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%;
 }
 
 .tienda-contenedor img{
@@ -315,7 +333,7 @@ header h3{
         }
 
         .nosotros-img-txt{
-            padding: 0 1rem;
+            padding: 0 0.2rem;
         }
 
         .nosotros{
@@ -346,10 +364,16 @@ header h3{
             margin: 0;
         }
 
+        .pventa-fondo{
+            margin: 0;
+            padding: 0;
+        }
+
+
         .formulario{
             margin-top: 4rem;
             margin-bottom: 0;
-            width: 90%;
+            width: 95%;
         }
 
         .contacto{
@@ -380,10 +404,7 @@ header h3{
             padding: 0;
         }
 
-        .pventa-fondo{
-            margin: 0;
-            padding: 0;
-        }
+        
 
 
 }
