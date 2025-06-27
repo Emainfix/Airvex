@@ -92,6 +92,12 @@ finalizarCompra.onclick = function()
   Comprar()
 }
 
+const limpiarCarrito = document.getElementById("btn-limpiar")
+
+limpiarCarrito.onclick = function(){
+  eliminarCarrito()
+}
+
 function addProducto(p) {
   
   let indexEncontrado = carrito.items.indexOf(p); // Extrae el index que ocupa el producto
@@ -121,7 +127,7 @@ function addProducto(p) {
   tituloCarrito.innerHTML = `<h2 class="text-center title-secciones">Carrito</h2>`;
   total.innerHTML = `<h3 class="px-4 border-top border-3 py-4"> TOTAL: <strong>US$${carrito.total}</strong> </h3>`;
   finalizarCompra.innerHTML = `<button class="btn-comprar">Finalizar Compra</button>`
-  
+  limpiarCarrito.innerHTML = `<a class="py-3 px-4 border-top border-1 text-decoration-none">Limpiar Carrito</a>`
 }
 
 function restarProducto(p) {
@@ -150,6 +156,7 @@ function restarProducto(p) {
     tituloCarrito.innerHTML = ``
     total.innerHTML = ``
     finalizarCompra.innerHTML = ``
+    limpiarCarrito.innerHTML = ``
   }
 
 }
@@ -165,4 +172,14 @@ function Comprar(){
 
   function SubTotal(p){
     return p.cantidad*p.precio
+  }
+
+  function eliminarCarrito(){
+    carrito.items = []
+
+    lista.innerHTML = ``
+    tituloCarrito.innerHTML = ``
+    total.innerHTML = ``
+    finalizarCompra.innerHTML = ``
+    limpiarCarrito.innerHTML = ``
   }
