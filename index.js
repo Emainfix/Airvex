@@ -162,7 +162,7 @@ function restarProducto(p) {
 }
 
 function Comprar(){
-  alert("Su compra fue por el total de: US$"+carrito.total)
+  alert("Su compra fue por el total de: US$"+carrito.total+"\n***** Console para el detalle *****")
   console.log("**********FACTURA**********\n")
   for (let i=0; i<carrito.items.length; i++){
     console.log(". "+[i+1]+": "+carrito.items[i].nombre+" .....Valor unit.: "+carrito.items[i].precio+" .....Cant.: "+carrito.items[i].cantidad+" .....Subtotal: US$"+SubTotal(carrito.items[i])+"\n")
