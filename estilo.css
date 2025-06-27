@@ -23,6 +23,10 @@
 }
 
 /*Carrito*/
+.carrito-detalle{
+    padding: 0 30% 0 30%;
+}
+
 .btn-comprar{
     background-color: var(--color-primary);
     color: #fff;
@@ -287,6 +291,11 @@ header h3{
 }
 
 /*Responsive*/
+@media (max-width: 1000px){
+    .carrito-detalle{
+            padding: 5%;
+        }
+}
 
 @media (max-width: 950px){
 
