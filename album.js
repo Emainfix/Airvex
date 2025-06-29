@@ -1,4 +1,4 @@
-const imgAlbumMain = document.getElementById("img-al-main")
+const imgAlbumMain = document.getElementById("img-al-main") // Traigo el div que corresponde a la imagen principal del album
 
 const imagenes = document.querySelectorAll("#album-imgs img"); // Selecciono cada elemento img dentro de mi album
 
