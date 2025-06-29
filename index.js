@@ -170,10 +170,6 @@ function Comprar(){
   console.log("TOTAL: US$"+carrito.total)
   }
 
-  function SubTotal(p){
-    return p.cantidad*p.precio
-  }
-
   const subTotal = (p) => p.cantidad*p.precio
 
   function eliminarCarrito(){
