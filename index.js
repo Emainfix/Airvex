@@ -12,21 +12,32 @@ const carrito = {
   total: 0,
 };
 
-const productos = []
 
-function crearProducto(id,cantidad,nombre,precio){
-  new Producto = (id,cantidad,nombre,precio);
-}
+//Creo un objeto de objetos para cada producto que tengo
+const productos = {
+  1:new Producto(1, 0, "S10 Plus", 200),
+  2:new Producto(2, 0, "ROPVACNIC", 150),
+  3:new Producto(3, 0, "A12 Pro", 180),
+  4:new Producto(4, 0, "BL-20 Lidar", 350),
+  5:new Producto(5, 0, "AI Ultra", 182)
+};
 
+const botonesAgregar = document.querySelectorAll(".btn-agregar") // Selecciono todos los elementos con la clase btn-agregar
 
-/*
+botonesAgregar.forEach(b => { // Reviso uno a uno los elementos con la clase btn-agregar
+  b.addEventListener("click", () =>{ // Cuando se hace click en cada uno
+    const id = b.dataset.id; // Creo una constante llamada id que extrae la información del html llamada data-id en el primer caso 1
+    addProducto(productos[id]) // Cargo en mi carrito el elemento dentro del objeto productos correspondiente al 1
+  })
+})
+
 
 const lista = document.getElementById("lista-carrito");
 
 const total = document.getElementById("total");
 
 const tituloCarrito = document.getElementById("titulo-carrito");
-
+/*
 //Boton aspiradora1
 const aspiradora1 = new Producto(1, 0, "S10 Plus", 200);
 
@@ -94,7 +105,7 @@ aspiradora5btn.onclick = function () {
 aspiradora5Eliminar.onclick = function () {
   restarProducto(aspiradora5);
 };
-
+*/
 const finalizarCompra = document.getElementById("btn-fin-compra")
 finalizarCompra.onclick = function()
 {
@@ -189,6 +200,4 @@ function Comprar(){
     total.innerHTML = ``
     finalizarCompra.innerHTML = ``
     limpiarCarrito.innerHTML = ``
-  }*/
-
-  
+  }
