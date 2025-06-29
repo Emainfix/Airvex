@@ -6,7 +6,7 @@ const imgAlbum04 = document.getElementById("img-album-04")
 const imgAlbum05 = document.getElementById("img-album-05")
 const imgAlbum06 = document.getElementById("img-album-06")
 
-imgAlbumMain.innerHTML = `<img src="${imgAlbum01.src}" class="img-main-album " alt="Imagen del álbum">`;
+imgAlbumMain.innerHTML = `<img src="${imgAlbum01.src}" class="img-main-album " alt="Imagen del álbum">`; // La galeria tiene por defecto la primer imagen
 
 imgAlbum01.onclick = function(){
     mostrarImg(imgAlbum01)
@@ -32,6 +32,4 @@ imgAlbum06.onclick = function(){
     mostrarImg(imgAlbum06)
 }
 
-function mostrarImg (a){
-    imgAlbumMain.innerHTML = `<img src="${a.src}" class="img-main-album " alt="Imagen del álbum">`;
-}
+const mostrarImg = (a) => imgAlbumMain.innerHTML = `<img src="${a.src}" class="img-main-album " alt="Imagen del álbum">`; // Cuando se selecciona una miniatura la convierte a la img principal
