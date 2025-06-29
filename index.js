@@ -12,6 +12,15 @@ const carrito = {
   total: 0,
 };
 
+const productos = []
+
+function crearProducto(id,cantidad,nombre,precio){
+  new Producto = (id,cantidad,nombre,precio);
+}
+
+
+/*
+
 const lista = document.getElementById("lista-carrito");
 
 const total = document.getElementById("total");
@@ -180,6 +189,6 @@ function Comprar(){
     total.innerHTML = ``
     finalizarCompra.innerHTML = ``
     limpiarCarrito.innerHTML = ``
-  }
+  }*/
 
   
