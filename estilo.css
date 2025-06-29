@@ -16,6 +16,7 @@
 .img-album-min{
     opacity: 50%;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .img-album-min:hover{
